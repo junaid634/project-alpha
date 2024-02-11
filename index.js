@@ -22,12 +22,14 @@ main().then(() => {
 }).catch((err) => {
     console.log(err);
 });
+
+
 app.get("/", (req, res) => {
     res.send("home page");
 });
 app.get("/listings", async (req, res) => {
     const list = await User.find({});
-    res.render("index.ejs", { list });
+    res.render("index.ejs", { list }); 
 });
 app.get("/listings/new", (req, res) => {
     res.render("newlist.ejs");
@@ -63,6 +65,13 @@ app.delete("/listings/:id", async (req, res) => {
     const list = await User.findByIdAndDelete(id);
     res.redirect("/listings");
 });
+app.get("/terms" ,(req,res)=>{
+    res.render("terms.ejs");
+});
+app.get("*" ,async (req,res)=>{
+    res.render("terms.ejs");
+});
+
 
 
 

@@ -1,0 +1,46 @@
+<body>
+    <div class="col-8 offset-2 mt-3">
+        <h1>Add New listing</h1>
+        <form action="/listings" method="post">
+
+            <div class="mb-3">
+                <label for="title" class="form-label">Title</label>
+                <input type="text" class="form-control" name="title" placeholder="Enter title">
+            </div>
+            <div class="mb-3">
+                <label for="description" class="form-label">Description</label>
+                <textarea type="text" class="form-control" name="description"
+                    placeholder="Enter description"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="image" class="form-label">Image Link/Url</label>
+
+                <input type="text" name="image" class="form-control" placeholder="Enter image url/link">
+            </div>
+            <div class="row">
+                <div class="mb-3 col-md-4">
+                    <label for="number" class="form-label">Number</label>
+
+                    <input type="number" class="form-control" name="price" placeholder="Enter price">
+                </div>
+                <div class="mb-3 col-md-8">
+                    <label for="location" class="form-label">Location</label>
+
+                    <input type="text" name="location" class="form-control" placeholder="Enter location">
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="country" class="form-label">Country</label>
+
+                <input type="text" class="form-control" name="country" placeholder="Enter country">
+            </div>
+
+            <br><br>
+            <button class="btn btn-primary">Add</button>
+            <br><br>
+
+        </form>
+    </div>
+</body>
+
+<% layout('/layouts/base') %>

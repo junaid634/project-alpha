@@ -1,0 +1,29 @@
+<% layout('/layouts/base') %>
+
+<body>
+    <div class="row col-8 offset-2 mt-3">
+    
+    <h3>List Detailes</h3>
+    <div class="card" style="width: 40rem;">
+        <img src="<%= list.image %>" class="card-img-top" alt="list image">
+        <div class="card-body">
+            <p class="card-text"><b>
+                    <%= list.title%>
+                </b></p>
+            <p class="card-text">
+                <%= list.description%>
+            </p>
+            <p class="card-text">
+               PKR- <%= list.price %> <br>Location : <%= list.location %> <br>Country : <%= list.country %>
+            </p>
+        </div>
+    </div>
+    <form method="get" action="/listings/edit/<%=list._id%>" >
+        <button class="btn btn-primary">Edit data</button>
+    </form>
+    <br><br>
+    <form method="post" action="/listings/<%= list._id %>?_method=Delete">
+        <button class="btn btn-danger" onclick="return confirm('are you sure to delete list')">Delete</button>
+    </form>
+</div>
+</body>

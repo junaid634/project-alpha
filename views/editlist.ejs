@@ -1,0 +1,48 @@
+
+<body>      
+        <div class="col-8 offset-2 mt-3">
+            <h1>You are Editing <%= editlist.title %></h1>
+                    <form method="post" action="/listings/<%= editlist._id %>?_method=patch" >
+        
+                    <div class="mb-3">
+                        <label for="title" class="form-label">Title</label>
+                        <input type="text" class="form-control" value="<%=editlist.title %>  " name="title" placeholder="Enter title">
+                    </div>
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Description</label>
+                        <textarea type="text" class="form-control"  name="description"
+                        placeholder="Enter description"><%= editlist.description %></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="image" class="form-label">Image Link/Url</label>
+        
+                        <input type="text" name="image" value="<%= editlist.image %>" class="form-control" placeholder="Enter image url/link">
+                    </div>
+                    <div class="row">
+                        <div class="mb-3 col-md-4">
+                            <label for="number" class="form-label">Number</label>
+        
+                            <input type="number" class="form-control" value="<%= editlist.price %>" name="price" placeholder="Enter price">
+                        </div>
+                        <div class="mb-3 col-md-8">
+                            <label for="location" class="form-label">Location</label>
+        
+                            <input type="text" name="location" value="<%= editlist.location %>" class="form-control" placeholder="Enter location">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="country" class="form-label">Country</label>
+        
+                        <input type="text" class="form-control" value="<%= editlist.country %>" name="country" placeholder="Enter country">
+                    </div>
+        
+                    <br><br>
+                    <button class="btn btn-info">Update</button>
+                    <br><br>
+        
+                </form>
+            </div>
+            
+   
+    </body>
+    <% layout('/layouts/base') %>

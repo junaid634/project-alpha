@@ -1,0 +1,49 @@
+body{
+    min-height: 100vh !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+.container{
+    flex: 1;
+}
+
+/* logo styling */
+.fa-solid{
+    color: blue; 
+    margin: 1rem;
+}
+.navbar-brand{
+    font-size: 2rem !important;
+}
+.social-info{
+    text-decoration: non;
+    color: black;
+}
+.social-info a{
+    margin-right: 1.2rem ;
+}
+/* cards styling */
+.info-link a:hover {
+   text-decoration: underline;
+}
+.card_container a{
+    text-decoration: none;
+
+}
+.card{
+    border: none !important;
+}
+.card-img-top{
+    height: 16rem !important;
+    border-radius: 1rem !important;
+}
+.card-e{
+    display: flex;
+    justify-content: space-between;
+}
+.card-img-overlay{
+    opacity: 0;
+}
+.card-img-overlay:hover {
+    opacity: 1;
+}

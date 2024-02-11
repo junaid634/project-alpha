@@ -1,0 +1,40 @@
+<% layout('/layouts/base') %>
+
+    <body>
+
+        <h3>Listings</h3>
+        <!-- <form action="/listings/new" method="get">
+        <button>Create New List</button>
+    </form> -->
+        <div class="row row-cols-xl-4 row-cols-md-3 row-cols-sm-2 g-4 ">
+            <% for(let listing of list){ %>
+                <div class="card_container">
+                    <a href="listings/<%= listing._id %>">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card text-bg-dark">
+                                <img src="<%= listing.image %>" class="card-img-top" alt="list image">
+                                <div class="card-img-overlay">
+                                    <div class="card-e">
+                                        <p>Junaid Khan</p>
+                                        <i class="fa-sharp fa-regular fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text"><b>
+                                        <%= listing.title%>
+                                    </b></p>
+                                <p class="card-text">
+                                    <%= listing.description%>
+                                </p>
+                                <p class="card-text">
+                                    PKR- <%= listing.price %>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <% } %>
+        </div>
+
+    </body>
